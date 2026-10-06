@@ -1,11 +1,11 @@
 # Contributing to BioMini
 
-BioMini is currently an educational framework under active development.
+BioMini is an educational scientific-software framework.
 
 ## Development setup
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/hk-yoon/biomini.git
 cd biomini
 python -m pip install -e ".[dev,validation]"
 python -m pytest
@@ -37,6 +37,18 @@ python -m pytest --cov=biomini --cov-report=term-missing
 
 A scientific result should not be considered correct merely because unit tests pass.
 Where practical, compare with an independent established implementation or reference.
+
+## Notebook changes
+
+The learner-facing notebooks are educational reconstructions, not a second canonical
+source tree.
+
+When changing a notebook:
+
+- preserve the learning progression;
+- keep explanations consistent with the canonical package;
+- execute the notebook end-to-end;
+- update `notebooks/README.md` if the learning sequence changes.
 
 ## Compatibility
 

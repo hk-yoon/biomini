@@ -1,0 +1,12 @@
+BioMini Phase I Pre-Freeze — Local Integration Audit
+
+pytest: 42 passed
+coverage: 90%
+compileall: PASS
+wheel build: PASS
+editable install: PASS
+basic example: PASS
+Biopython reference validation: PASS
+Notebook 01–08 execution: PASS
+
+GitHub-hosted CI after repository integration: PENDING

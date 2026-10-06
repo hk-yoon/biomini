@@ -8,9 +8,9 @@ Phase I에서 수행한 Step 1–15의 개발 경과, 현재 canonical architect
 
 현재 상태는 다음과 같다.
 
-> **BioMini v0.1.0 — Phase I Release Candidate 1 (RC1)**
+> **BioMini v0.1.0 — Phase I Pre-Freeze**
 
-Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. 다만 GitHub 공개 문서, 교육용 notebook/course material, 최종 release audit가 남아 있으므로 아직 `Phase I FROZEN`으로 선언하지 않는다.
+Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. Phase I 교육용 Notebook 01–08도 작성 및 실행 감사가 완료되었다. 현재는 GitHub repository 통합과 최종 release audit가 남아 있으므로 아직 `Phase I FROZEN`으로 선언하지 않는다.
 
 ---
 
@@ -628,7 +628,7 @@ development:
 
 # 6. 현재 Canonical Architecture
 
-Phase I RC1의 중심 구조는 다음과 같다.
+Phase I Pre-Freeze의 중심 구조는 다음과 같다.
 
 ```text
 DomainEntity
@@ -685,7 +685,7 @@ Errors
 └── DataError
 ```
 
-Phase I RC1에는 약 26개의 class-level abstraction이 존재한다. 단순히 class 수를 늘리는 것이 목적은 아니며, 독립된 responsibility와 state가 있는 경우에만 class를 도입하는 것을 기본 원칙으로 한다.
+Phase I Pre-Freeze에는 약 26개의 class-level abstraction이 존재한다. 단순히 class 수를 늘리는 것이 목적은 아니며, 독립된 responsibility와 state가 있는 경우에만 class를 도입하는 것을 기본 원칙으로 한다.
 
 ---
 
@@ -831,10 +831,10 @@ Phase I에서 의도적으로 제한한 biological semantics는 다음과 같다
 
 # 10. Validation Status
 
-Phase I RC1은 다음 validation을 통과했다.
+Phase I Pre-Freeze baseline은 다음 validation을 통과했다.
 
 ```text
-pytest                    43 passed
+pytest                    42 passed
 line coverage             90%
 compileall                PASS
 wheel build               PASS
@@ -1148,12 +1148,12 @@ docs/
 
 ---
 
-# 17. Phase I 교육자료 계획
+# 17. Phase I 교육자료 완료 상태
 
-Phase I은 다음과 같은 교육 과정으로 재구성할 수 있다.
+Phase I 교육 과정은 다음 8개의 Notebook으로 완성되었다.
 
 ```text
-01 From Classes to Biological Objects
+01 From Python Classes to Biological Objects
 02 Inheritance and Sequence Abstraction
 03 DNA, RNA, Protein and Biological Transformations
 04 Separating Domain Objects and Analysis
@@ -1163,73 +1163,49 @@ Phase I은 다음과 같은 교육 과정으로 재구성할 수 있다.
 08 Validation, Packaging and Scientific Software
 ```
 
-각 notebook은 다음 pedagogical pattern을 사용하는 것이 좋다.
+각 Notebook은 Introduction, Learning Objectives, Concept, Initial Design, Problem /
+Limitation, Design Decision, Implementation, Execution, Validation, Canonical BioMini
+Comparison, What We Learned, Exercises, Bridge to Next Notebook의 흐름을 사용한다.
 
-```text
-Concept
-  ↓
-Initial Design
-  ↓
-Problem
-  ↓
-Design Decision
-  ↓
-Implementation
-  ↓
-Execution
-  ↓
-Validation
-  ↓
-What We Learned
-```
+교육용 Notebook은 production source의 복사본이 아니라 architecture가 왜 진화했는지를
+설명하는 learner-facing material이다. canonical implementation은 계속 `biomini/`
+source이다.
 
-즉 final code를 처음부터 보여주는 방식보다는 framework가 **왜 이렇게 진화했는가**를 가르치는 방식이 Phase I의 교육적 가치를 더 잘 살린다.
+Notebook 01–08은 Pre-Freeze execution/consistency audit에서 모두 end-to-end 실행
+PASS했다. Notebook 05에서 발견된 class redefinition/instance 문제는 audit 중
+수정되었으며, 모든 Notebook cell에는 현재 `nbformat` 호환을 위한 cell ID를 부여했다.
 
 ---
 
 # 18. Phase I Freeze 전에 남은 작업
 
-코드 구현 및 A–F corrective pass는 완료되었다.
+Phase I source 구현, Canonical Audit A–F, public GitHub repository, hosted CI,
+교육용 Notebook 01–08 및 notebook execution audit는 완료되었다.
 
-남은 작업은 다음 네 영역이다.
+현재 남은 작업은 release finalization이다.
 
-1. **GitHub publication preparation**
-   - final README
-   - architecture document
-   - design decisions
-   - scientific-validation document
-   - roadmap
-   - CHANGELOG
-   - CI workflow
+1. **Repository Integration**
+   - updated GitHub-facing documentation 반영
+   - `notebooks/README.md` 반영
+   - audited Notebook 01–08을 `notebooks/`에 반영
 
-2. **Educational material**
-   - Phase I notebooks
-   - instructor/learner guide
-   - exercises
-   - expected outputs
+2. **Post-Integration Validation**
+   - pytest / coverage
+   - compileall
+   - wheel build
+   - editable install
+   - basic example
+   - Notebook 01–08 execution
+   - GitHub-hosted CI 재확인
 
-3. **Release packaging**
-   - canonical repository layout
-   - release ZIP
-   - version/tag policy
+3. **Final Release Audit**
+   - code / tests / docs / notebooks / examples / metadata 정합성
+   - stale milestone wording 제거
+   - release tag/status 확인
 
-4. **Final Release Audit**
-   - code
-   - tests
-   - documentation
-   - examples
-   - installation
-   - cross-platform assumptions
-   - release metadata
-
-이 작업을 완료한 뒤 다음 상태로 전환한다.
-
-```text
-BioMini v0.1.0
-Phase I — FROZEN
-```
-
-그 후 Phase II development를 시작한다.
+4. **Freeze**
+   - tag/release `v0.1.0-phase1`
+   - `BioMini v0.1.0 — Phase I FROZEN` 선언
 
 ---
 
@@ -1287,13 +1263,13 @@ BioMini Phase I은 다음 목표를 달성했다.
 
 > biological domain object에서 출발하여 scientific analysis, feature engineering, machine learning, persistence, provenance, validation, testing, packaging으로 이어지는 작은 but coherent scientific software framework를 구축했다.
 
-현재 구현은 **BioMini v0.1.0 Phase I RC1**으로 간주한다.
+현재 구현은 **BioMini v0.1.0 — Phase I Pre-Freeze**로 간주한다.
 
 Phase I source code는 기능적으로 completion 상태이며, Canonical Audit correction A–F도 모두 해결되었다.
 
-다만 최종 공개와 교육 활용을 위한 documentation, educational material, final release audit가 남아 있으므로 아직 `FROZEN`으로 선언하지 않는다.
+교육자료와 GitHub 공개 기반은 완료되었으나, repository 통합 후 hosted CI 재확인과 final release audit가 남아 있으므로 아직 `FROZEN`으로 선언하지 않는다.
 
-다음 작업은 GitHub publication preparation과 Phase I educational material 제작이며, 최종 release audit 이후:
+다음 작업은 prepared documentation/notebook package를 GitHub repository에 통합하고 post-integration validation을 수행하는 것이다. final release audit 이후:
 
 ```text
 BioMini v0.1.0

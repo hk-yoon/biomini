@@ -64,10 +64,10 @@ BioMini's minimal FASTA parser is compared with Biopython `SeqIO` for supported 
 
 ## Current result
 
-At Phase I RC1:
+At the current Phase I Pre-Freeze baseline:
 
 ```text
-43 tests passed
+42 tests passed
 90% line coverage
 Biopython reference-validation PASS
 ```

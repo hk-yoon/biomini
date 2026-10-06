@@ -15,11 +15,21 @@ Phase III
 Self-Driving Lab
 ```
 
+Source code remains cumulative. Phase milestones are preserved with tags/releases.
+
+---
+
 ## Phase I — Core Scientific Software
 
-Target release: `v0.1.0-phase1`
+Target release:
 
-Status: Release Candidate.
+```text
+v0.1.0-phase1
+```
+
+Status:
+
+> **Pre-Freeze**
 
 Completed:
 
@@ -35,18 +45,30 @@ Completed:
 - scientific validation
 - production hardening
 - package installation/versioning
+- GitHub Actions CI
+- Phase I educational Notebooks 01–08
+- notebook execution/consistency audit
 
 Remaining before final Phase I freeze:
 
-- educational notebook set
-- final release audit
-- GitHub release/tag
+- integrate audited notebooks into `notebooks/`
+- add `notebooks/README.md`
+- finish stale-document cleanup
+- final full release audit
+- tag/release `v0.1.0-phase1`
+- mark Phase I **FROZEN**
+
+---
 
 ## Phase II — Scientific AI
 
-Expected release family: `v0.2.x`
+Expected release family:
 
-### Step 16 — Sequence representations
+```text
+v0.2.x
+```
+
+### Step 16 — Sequence Representations
 
 Planned concepts:
 
@@ -65,6 +87,8 @@ Representation / Encoder
 Model-ready numerical form
 ```
 
+The domain object should remain distinct from its ML representation.
+
 ### Step 17 — PyTorch / Deep Learning
 
 Planned learning sequence:
@@ -75,10 +99,11 @@ Planned learning sequence:
 - 1D CNN
 - training / validation workflow
 
-The objective is not model sophistication alone, but showing how the existing Phase I
-architecture accommodates deep learning.
+The objective is not model sophistication alone, but showing how the Phase I
+architecture accommodates deep learning without discarding the scientific-software
+foundation.
 
-### Step 18 — Biological foundation-model embeddings
+### Step 18 — Biological Foundation-Model Embeddings
 
 Planned direction:
 
@@ -88,13 +113,20 @@ Planned direction:
 - ESM-family examples
 - ProtT5-family examples
 
-BioMini should provide an interface rather than couple the core to one model family.
+BioMini should expose an interface rather than couple the core architecture to one model
+family.
+
+---
 
 ## Phase III — Self-Driving Lab
 
-Expected release family: `v0.3.x`
+Expected release family:
 
-### Step 19 — Experiment domain model
+```text
+v0.3.x
+```
+
+### Step 19 — Experiment Domain Model
 
 Planned abstractions:
 
@@ -106,7 +138,7 @@ Planned abstractions:
 
 The existing ML `Sample` concept must remain distinct from a physical laboratory sample.
 
-### Step 20 — Search space / optimizer
+### Step 20 — Search Space / Optimizer
 
 Planned concepts:
 
@@ -135,7 +167,7 @@ Optimizer
   └───────────↺
 ```
 
-### Step 22 — Instrument abstraction
+### Step 22 — Instrument Abstraction
 
 Potential interfaces:
 
@@ -146,7 +178,7 @@ Potential interfaces:
 
 Vendor-specific APIs should be adapters rather than core-domain dependencies.
 
-### Step 23 — SDL orchestration
+### Step 23 — SDL Orchestration
 
 Integrate the closed loop:
 
@@ -170,6 +202,8 @@ Optimizer
 Next Experiment
 ```
 
+---
+
 ## Repository policy
 
 Use one repository.
@@ -183,3 +217,21 @@ v0.3.0-phase3
 ```
 
 Educational material is phase-separated; framework source remains cumulative.
+
+A likely long-term structure is:
+
+```text
+notebooks/
+├── phase1/
+├── phase2/
+└── phase3/
+
+docs/
+├── phase1/
+├── phase2/
+└── phase3/
+```
+
+For the current Phase I release, the eight audited notebooks can be published directly
+under `notebooks/`; phase subdirectories can be introduced when Phase II materials are
+added.

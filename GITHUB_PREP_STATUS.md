@@ -1,30 +1,63 @@
-# GitHub Publication Preparation Status
+# GitHub Publication / Pre-Freeze Status
 
-Status: **Prepared for repository creation / public RC review**
+Status: **Public repository active — Phase I Pre-Freeze**
 
-Validation:
-
-- pytest return code: 0
-- coverage return code: 0
-- compileall return code: 0
-
-Current test summary:
+Repository:
 
 ```text
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m                               [100%][0m
-[33m=============================== warnings summary ===============================[0m
-tests/test_audit_corrections.py::test_A_short_rna_translation_matches_biopython_empty_result
-tests/test_reference_validation.py::test_translation_matches_biopython_to_first_stop
-  /opt/pyvenv/lib/python3.13/site-packages/Bio/Seq.py:2877: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
-    warnings.warn(
-
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+https://github.com/hk-yoon/biomini
 ```
 
-Remaining before public Phase I final release:
+## Completed
 
-- create GitHub repository and set actual repository URL/contact metadata
-- confirm CI passes on GitHub-hosted runners
-- create educational notebook/course material
-- final release audit
-- tag/release `v0.1.0-phase1`
+- repository created and public
+- canonical package structure uploaded
+- GitHub Actions workflow active
+- hosted CI confirmed
+- Python 3.10–3.13 CI matrix confirmed
+- README / architecture / design / validation / roadmap documents present
+- contribution and security documents present
+- package version and dependency sources consolidated
+- Phase I Completion Report present
+- Canonical Audit A–F corrections completed
+- Phase I educational Notebooks 01–08 completed
+- notebook execution/consistency audit completed
+
+## Current validation baseline
+
+```text
+pytest                    42 passed
+coverage                  90%
+compileall                PASS
+wheel build               PASS
+editable install          PASS
+basic example             PASS
+Biopython validation      PASS
+GitHub Actions CI         PASS
+Python 3.10–3.13          PASS
+Notebook 01–08 execution  PASS
+```
+
+## Current Pre-Freeze work
+
+The repository is no longer in "preparation for repository creation" status.
+
+The remaining work is release finalization:
+
+1. update stale GitHub-facing documentation
+2. add `notebooks/README.md`
+3. add audited Phase I notebooks to `notebooks/`
+4. rerun the complete repository validation after notebook integration
+5. perform final release consistency audit
+6. create tag/release `v0.1.0-phase1`
+7. declare **Phase I FROZEN**
+
+## Release rule
+
+Until the final audit and tag are complete, the correct project status is:
+
+> **BioMini v0.1.0 — Phase I Pre-Freeze**
+
+After the final release audit:
+
+> **BioMini v0.1.0 — Phase I FROZEN**

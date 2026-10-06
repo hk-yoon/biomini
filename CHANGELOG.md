@@ -2,9 +2,9 @@
 
 All notable BioMini changes will be documented here.
 
-The project is currently preparing its first public Phase I release.
+The project is currently preparing its first public Phase I final release.
 
-## [0.1.0] — Phase I Release Candidate
+## [0.1.0] — Phase I Pre-Freeze
 
 ### Added
 
@@ -22,8 +22,9 @@ The project is currently preparing its first public Phase I release.
 - Biopython cross-validation tests
 - pytest regression suite
 - package metadata and editable installation
-- GitHub CI configuration
+- GitHub Actions CI configuration
 - Phase I architecture, design, validation, and roadmap documentation
+- eight-part Phase I educational notebook course
 
 ### Changed
 
@@ -32,6 +33,10 @@ The project is currently preparing its first public Phase I release.
 - nested serialized objects validate schema versions
 - dependency metadata consolidated into `pyproject.toml`
 - package version consolidated into `biomini/_version.py`
+- project status wording changed from RC1 to **Phase I Pre-Freeze** during finalization
+- Notebook 05 corrected after execution audit so `Dataset.to_xy()` is used on an instance
+  created from the final `Dataset` class definition
+- notebook cells normalized with cell IDs for current `nbformat` compatibility
 
 ### Fixed
 
@@ -39,11 +44,29 @@ The project is currently preparing its first public Phase I release.
 - empty Protein analyzer operations now have explicit zero-valued semantics
 - framework-boundary errors now use BioMini-specific exception classes
 
+### Validation
+
+Current Phase I baseline:
+
+```text
+42 tests passed
+90% line coverage
+compileall PASS
+wheel build PASS
+editable install PASS
+basic example PASS
+Biopython reference validation PASS
+GitHub Actions CI PASS
+Python 3.10–3.13 PASS
+Notebook 01–08 execution PASS
+```
+
 ### Security
 
 - documented that `joblib` artifacts must only be loaded from trusted sources
 
 ### Status
 
-This version remains a release candidate until educational materials and the final Phase I
-release audit are complete.
+This version remains **Pre-Freeze** until the notebook course is integrated into the
+repository, GitHub-facing documentation cleanup is complete, the final repository audit
+passes, and tag/release `v0.1.0-phase1` is created.

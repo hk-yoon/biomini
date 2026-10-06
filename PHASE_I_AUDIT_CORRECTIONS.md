@@ -4,7 +4,7 @@
 
 All canonical-audit correction items A–F have been implemented and tested.
 
-Current status: **Phase I Release Candidate 1 (RC1)**.
+The A–F correction pass was completed before the current **Phase I Pre-Freeze** finalization stage.
 
 ## A. Empty translation product semantics — RESOLVED
 
@@ -74,7 +74,7 @@ Removed legacy `requirements.txt`.
 
 After all A–F corrections:
 
-- pytest: 43 passed
+- pytest: 42 passed
 - coverage: 90%
 - compileall: passed
 - wheel build: passed
@@ -88,9 +88,16 @@ The remaining Biopython warning concerns deliberately tested incomplete terminal
 
 A–F are no longer Phase I freeze blockers.
 
-Remaining work is release/documentation oriented:
+The A–F correction items are historical and no longer Phase I freeze blockers.
+
+Subsequent work completed:
 - Phase I Completion Report
-- GitHub documentation and CI
-- educational materials
+- public GitHub repository and hosted CI
+- Phase I educational Notebooks 01–08
+- notebook execution/consistency audit
+
+Current remaining work:
+- integrate the audited notebooks and updated GitHub-facing documentation
+- confirm hosted CI after integration
 - final release audit
 - final Phase I freeze/tag

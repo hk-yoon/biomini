@@ -14,8 +14,6 @@ load them in a privileged environment.
 
 ## Reporting
 
-For the current educational release-candidate stage, security reports should be sent
-privately to the repository maintainer rather than disclosed through a public issue.
-
-A public security contact can be added when the repository ownership/contact information
-is finalized.
+For the current educational project, security issues should be reported privately to the
+repository maintainer. Do not publish exploit details or malicious artifact examples in a
+public issue before the maintainer has had an opportunity to assess the report.
