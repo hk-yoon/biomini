@@ -1,4 +1,4 @@
-BioMini Phase I Pre-Freeze — Local Integration Audit
+BioMini v0.1.0 — Phase I FROZEN Validation Baseline
 
 pytest: 42 passed
 coverage: 90%
@@ -11,4 +11,6 @@ Notebook 01–08 execution: PASS
 
 GitHub-hosted CI after repository integration: PASS
 
-Final Release Audit: PASS (release-ready; final freeze-status/tag step remains)
+Final Release Audit: PASS
+Phase I release status: FROZEN
+Release tag target: v0.1.0-phase1

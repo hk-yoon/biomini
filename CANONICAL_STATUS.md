@@ -2,7 +2,7 @@
 
 ## Current canonical milestone
 
-**BioMini v0.1.0 — Phase I Pre-Freeze**
+**BioMini v0.1.0 — Phase I FROZEN**
 
 Phase I implementation Steps 1–15 are complete.
 Canonical Audit corrections A–F are resolved and regression-tested.
@@ -10,9 +10,10 @@ Canonical Audit corrections A–F are resolved and regression-tested.
 The Phase I educational course has also been completed as eight Jupyter notebooks and
 has passed a notebook execution/consistency audit.
 
-Phase I is **not yet marked FROZEN** only because the final freeze-status commit,
-its confirmation CI, and the `v0.1.0-phase1` tag/release remain. Repository integration,
-documentation cleanup, and the final release audit are complete.
+Phase I is **FROZEN** at the release-status commit represented by this document.
+Repository integration, documentation cleanup, post-integration validation, and the final
+release audit are complete. The operational release step is to confirm CI on this exact
+commit and then create tag/release `v0.1.0-phase1` without changing Phase I content.
 
 ## Validation status
 
@@ -84,12 +85,14 @@ Completed:
 - pull-request template
 - GitHub Actions CI confirmed on hosted runners
 
-## Remaining before Phase I freeze
+## Release finalization
 
-1. apply the final **FROZEN** status update to release-facing documents
-2. confirm GitHub Actions CI on that exact release commit
-3. create tag/release `v0.1.0-phase1`
-4. declare Phase I **FROZEN**
+Phase I content is frozen. No further Phase I code/notebook/content changes are planned
+before the release tag.
+
+1. confirm GitHub Actions CI on this exact frozen commit
+2. create tag/release `v0.1.0-phase1`
+3. preserve this tag as the canonical Phase I milestone
 
 ## Next development phase after freeze
 

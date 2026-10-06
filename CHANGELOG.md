@@ -2,9 +2,9 @@
 
 All notable BioMini changes will be documented here.
 
-The project is currently preparing its first public Phase I final release.
+The project has completed its first Phase I release content and is finalizing the release tag.
 
-## [0.1.0] — Phase I Pre-Freeze
+## [0.1.0] — Phase I FROZEN
 
 ### Added
 
@@ -67,6 +67,7 @@ Notebook 01–08 execution PASS
 
 ### Status
 
-This version remains **Pre-Freeze** only until the final freeze-status commit passes
-GitHub Actions CI and tag/release `v0.1.0-phase1` is created. Notebook integration,
-documentation cleanup, post-integration validation, and the final release audit are complete.
+Phase I content is **FROZEN**. Notebook integration, documentation cleanup,
+post-integration validation, and the final release audit are complete. After confirmation
+CI on this exact commit, tag/release `v0.1.0-phase1` is created without further Phase I
+content changes.

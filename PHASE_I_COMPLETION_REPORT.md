@@ -8,9 +8,9 @@ Phase I에서 수행한 Step 1–15의 개발 경과, 현재 canonical architect
 
 현재 상태는 다음과 같다.
 
-> **BioMini v0.1.0 — Phase I Pre-Freeze**
+> **BioMini v0.1.0 — Phase I FROZEN**
 
-Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. Phase I 교육용 Notebook 01–08의 작성·실행 감사와 GitHub repository 통합, post-integration validation, final release audit도 완료되었다. 현재는 최종 freeze-status commit과 그 commit에 대한 CI 확인, `v0.1.0-phase1` tag/release만 남아 있으므로 아직 `Phase I FROZEN`으로 선언하지 않는다.
+Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. Phase I 교육용 Notebook 01–08의 작성·실행 감사, GitHub repository 통합, post-integration validation, final release audit, release-status 정리까지 완료되었다. 이 문서가 반영된 commit을 **Phase I FROZEN** 상태로 간주하며, 이 exact commit에 대한 confirmation CI가 통과하면 `v0.1.0-phase1` tag/release를 생성한다.
 
 ---
 
@@ -628,7 +628,7 @@ development:
 
 # 6. 현재 Canonical Architecture
 
-Phase I Pre-Freeze의 중심 구조는 다음과 같다.
+Phase I FROZEN의 중심 구조는 다음과 같다.
 
 ```text
 DomainEntity
@@ -685,7 +685,7 @@ Errors
 └── DataError
 ```
 
-Phase I Pre-Freeze에는 약 26개의 class-level abstraction이 존재한다. 단순히 class 수를 늘리는 것이 목적은 아니며, 독립된 responsibility와 state가 있는 경우에만 class를 도입하는 것을 기본 원칙으로 한다.
+Phase I FROZEN에는 약 26개의 class-level abstraction이 존재한다. 단순히 class 수를 늘리는 것이 목적은 아니며, 독립된 responsibility와 state가 있는 경우에만 class를 도입하는 것을 기본 원칙으로 한다.
 
 ---
 
@@ -831,7 +831,7 @@ Phase I에서 의도적으로 제한한 biological semantics는 다음과 같다
 
 # 10. Validation Status
 
-Phase I Pre-Freeze baseline은 다음 validation을 통과했다.
+Phase I FROZEN baseline은 다음 validation을 통과했다.
 
 ```text
 pytest                    42 passed
@@ -1177,11 +1177,11 @@ PASS했다. Notebook 05에서 발견된 class redefinition/instance 문제는 au
 
 ---
 
-# 18. Phase I Freeze 직전 최종 상태
+# 18. Phase I FROZEN 최종 상태
 
 Phase I source 구현, Canonical Audit A–F, public GitHub repository, 교육용 Notebook
 01–08, notebook execution audit, repository integration, post-integration validation,
-GitHub-hosted CI, final release audit는 모두 완료되었다.
+GitHub-hosted CI, final release audit, freeze-status finalization은 모두 완료되었다.
 
 검증된 baseline은 다음과 같다.
 
@@ -1198,12 +1198,13 @@ GitHub Actions CI         PASS
 Python 3.10–3.13          PASS
 ```
 
-현재 남은 작업은 release 상태를 확정하는 최소 단계이다.
+이 문서가 포함된 commit을 Phase I의 frozen release commit으로 사용한다.
 
-1. release-facing 문서를 **Phase I FROZEN** 상태로 최종 갱신
-2. 그 exact release commit에 대해 GitHub Actions CI 재확인
-3. tag/release `v0.1.0-phase1` 생성
-4. **BioMini v0.1.0 — Phase I FROZEN** 선언
+남은 작업은 content 변경이 아니라 release operation이다.
+
+1. 이 exact frozen commit에 대해 GitHub Actions CI를 확인
+2. tag/release `v0.1.0-phase1` 생성
+3. tag를 Phase I canonical milestone로 보존
 
 ---
 
@@ -1261,22 +1262,18 @@ BioMini Phase I은 다음 목표를 달성했다.
 
 > biological domain object에서 출발하여 scientific analysis, feature engineering, machine learning, persistence, provenance, validation, testing, packaging으로 이어지는 작은 but coherent scientific software framework를 구축했다.
 
-현재 구현은 **BioMini v0.1.0 — Phase I Pre-Freeze / Release-Ready**로 간주한다.
+현재 구현은 **BioMini v0.1.0 — Phase I FROZEN**으로 간주한다.
 
 Phase I source code는 기능적으로 completion 상태이며, Canonical Audit correction A–F,
 교육자료 작성과 실행 감사, GitHub repository 통합, post-integration validation,
-Python 3.10–3.13 hosted CI, final release audit까지 모두 완료되었다.
-
-남은 작업은 release-facing 문서를 **FROZEN** 상태로 최종 갱신하고, 그 exact commit에
-대한 CI를 확인한 뒤 `v0.1.0-phase1` tag/release를 생성하는 것이다.
-
-그 단계가 완료되면:
+Python 3.10–3.13 hosted CI, final release audit, release-status finalization까지 완료되었다.
 
 ```text
 BioMini v0.1.0
 Phase I — FROZEN
 ```
 
-으로 확정한다.
+이 상태에서 Phase I content는 더 이상 변경하지 않는다. 이 exact frozen commit에
+대한 confirmation CI가 통과하면 `v0.1.0-phase1` tag/release를 생성한다.
 
 그 이후 BioMini는 Phase II — Scientific AI로 진행한다.

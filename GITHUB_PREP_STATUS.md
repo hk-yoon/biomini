@@ -1,6 +1,6 @@
-# GitHub Publication / Pre-Freeze Status
+# GitHub Publication / Phase I Frozen Status
 
-Status: **Public repository active — Phase I Pre-Freeze**
+Status: **Public repository active — Phase I FROZEN**
 
 Repository:
 
@@ -38,24 +38,20 @@ Python 3.10–3.13          PASS
 Notebook 01–08 execution  PASS
 ```
 
-## Current Pre-Freeze work
+## Frozen release state
 
 Repository creation, notebook integration, documentation cleanup, post-integration
-validation, and the final release audit are complete.
+validation, final release audit, and freeze-status finalization are complete.
 
-The remaining work is the freeze/release sequence:
+The Phase I content represented by this commit is frozen. Remaining operational release steps:
 
-1. apply the final **FROZEN** status update
-2. confirm GitHub Actions CI on that exact release commit
-3. create tag/release `v0.1.0-phase1`
-4. declare **Phase I FROZEN**
+1. confirm GitHub Actions CI on this exact commit
+2. create tag/release `v0.1.0-phase1`
 
 ## Release rule
 
-Until the final audit and tag are complete, the correct project status is:
-
-> **BioMini v0.1.0 — Phase I Pre-Freeze**
-
-After the final release audit:
+The canonical Phase I state is:
 
 > **BioMini v0.1.0 — Phase I FROZEN**
+
+The `v0.1.0-phase1` tag must point to the exact frozen commit after CI succeeds.

@@ -9,16 +9,25 @@ classes representing biological objects and develops them step by step into a co
 architecture for scientific analysis, machine learning, reproducibility, Scientific AI,
 and ultimately Self-Driving Lab (SDL) systems.
 
-> Current milestone: **BioMini v0.1.0 — Phase I Pre-Freeze**
+> Current milestone: **BioMini v0.1.0 — Phase I FROZEN**
 
 Phase I core implementation and the eight-part educational notebook course are complete.
-Repository integration, local validation, notebook execution audit, and the final release
-audit have also been completed successfully. The project is now release-ready; only the
-final freeze-status update, confirmation CI, and `v0.1.0-phase1` tag/release remain.
+Repository integration, local validation, notebook execution audit, final release audit,
+and release-status finalization are complete. This commit is the intended frozen Phase I
+release state; after confirmation CI, it will be tagged as `v0.1.0-phase1`.
 
 ---
 
 # 한국어 요약
+
+> 현재 상태: **BioMini v0.1.0 — Phase I FROZEN**
+
+Phase I의 구현, 8개 교육용 Notebook, repository 통합, local validation,
+Biopython reference validation, Python 3.10–3.13 GitHub Actions CI,
+그리고 final release audit까지 모두 완료되었다.
+
+이 commit은 Phase I의 최종 frozen release 상태이며, confirmation CI가 통과하면
+동일한 commit에 `v0.1.0-phase1` tag/release를 생성한다.
 
 ## BioMini란?
 
@@ -440,21 +449,19 @@ See [`docs/roadmap.md`](docs/roadmap.md).
 ## Current Status
 
 Phase I source implementation, educational notebooks, repository integration,
-post-integration validation, and final release audit are complete.
+post-integration validation, final release audit, and freeze-status finalization are complete.
 
-Remaining before final Phase I freeze:
+Release sequence for this frozen commit:
 
 ```text
-final freeze-status update
+Phase I FROZEN release commit
         ↓
 GitHub Actions CI confirmation
         ↓
 tag / release: v0.1.0-phase1
-        ↓
-Phase I FROZEN
 ```
 
-After the Phase I freeze, development proceeds to **Phase II — Scientific AI**.
+Phase II development begins only after the Phase I tag/release is created.
 
 ---
 

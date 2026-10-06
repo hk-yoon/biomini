@@ -29,7 +29,7 @@ v0.1.0-phase1
 
 Status:
 
-> **Pre-Freeze**
+> **FROZEN**
 
 Completed:
 
@@ -49,12 +49,14 @@ Completed:
 - Phase I educational Notebooks 01–08
 - notebook execution/consistency audit
 
-Remaining before final Phase I freeze:
+Phase I content is frozen.
 
-- apply final **FROZEN** status update
-- confirm GitHub Actions CI on the exact release commit
-- tag/release `v0.1.0-phase1`
-- declare Phase I **FROZEN**
+Release operation:
+
+- confirm GitHub Actions CI on the exact frozen commit
+- tag/release that commit as `v0.1.0-phase1`
+
+No further Phase I implementation or notebook changes are planned after the frozen commit.
 
 ---
 

@@ -31,11 +31,12 @@ course has been completed and execution-audited.
 
 Current milestone:
 
-> **BioMini v0.1.0 — Phase I Pre-Freeze**
+> **BioMini v0.1.0 — Phase I FROZEN**
 
-Repository integration, documentation cleanup, post-integration validation, and the
-final release audit are complete. The remaining work is the final **FROZEN** status commit,
-confirmation CI, and the `v0.1.0-phase1` tag/release.
+Repository integration, documentation cleanup, post-integration validation, final
+release audit, and freeze-status finalization are complete. Phase I content is frozen.
+After confirmation CI on this exact commit, the project is tagged/released as
+`v0.1.0-phase1`.
 
 ## Phase I notebook course
 
