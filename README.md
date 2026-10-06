@@ -13,8 +13,9 @@ and ultimately Self-Driving Lab (SDL) systems.
 
 Phase I core implementation and the eight-part educational notebook course are complete.
 Repository integration, local validation, notebook execution audit, final release audit,
-and release-status finalization are complete. This commit is the intended frozen Phase I
-release state; after confirmation CI, it will be tagged as `v0.1.0-phase1`.
+confirmation CI, and the `v0.1.0-phase1` GitHub release are complete.
+
+The canonical Phase I release is preserved at tag `v0.1.0-phase1`.
 
 ---
 
@@ -24,10 +25,9 @@ release state; after confirmation CI, it will be tagged as `v0.1.0-phase1`.
 
 Phase I의 구현, 8개 교육용 Notebook, repository 통합, local validation,
 Biopython reference validation, Python 3.10–3.13 GitHub Actions CI,
-그리고 final release audit까지 모두 완료되었다.
+final release audit, 그리고 `v0.1.0-phase1` GitHub release까지 모두 완료되었다.
 
-이 commit은 Phase I의 최종 frozen release 상태이며, confirmation CI가 통과하면
-동일한 commit에 `v0.1.0-phase1` tag/release를 생성한다.
+Phase I의 canonical release는 tag `v0.1.0-phase1`로 보존한다.
 
 ## BioMini란?
 
@@ -388,6 +388,7 @@ Important project documents:
 
 - [`PHASE_I_COMPLETION_REPORT.md`](PHASE_I_COMPLETION_REPORT.md) — canonical Phase I development record
 - [`CANONICAL_STATUS.md`](CANONICAL_STATUS.md) — current milestone/status
+- [`docs/BioMini_Phase_I_USER_GUIDE.md`](docs/BioMini_Phase_I_USER_GUIDE.md) — installation, learning, and usage guide for Phase I
 - [`docs/architecture.md`](docs/architecture.md) — architecture
 - [`docs/design-decisions.md`](docs/design-decisions.md) — design decisions
 - [`docs/scientific-validation.md`](docs/scientific-validation.md) — validation strategy
@@ -449,19 +450,19 @@ See [`docs/roadmap.md`](docs/roadmap.md).
 ## Current Status
 
 Phase I source implementation, educational notebooks, repository integration,
-post-integration validation, final release audit, and freeze-status finalization are complete.
+post-integration validation, final release audit, confirmation CI, tag creation,
+and GitHub release publication are complete.
 
-Release sequence for this frozen commit:
+Canonical Phase I release:
 
 ```text
-Phase I FROZEN release commit
-        ↓
-GitHub Actions CI confirmation
-        ↓
-tag / release: v0.1.0-phase1
+BioMini v0.1.0 — Phase I FROZEN
+Tag: v0.1.0-phase1
+Commit: 38a0486c435bb7d891f66d18bff54349edb06204
 ```
 
-Phase II development begins only after the Phase I tag/release is created.
+Phase I is now preserved as a frozen milestone.
+Further development proceeds on `main` toward **Phase II — Scientific AI**.
 
 ---
 
