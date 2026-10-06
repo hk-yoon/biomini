@@ -1,0 +1,8 @@
+BioMini Phase I RC1
+pytest: 43 passed
+coverage: 90%
+compileall: PASS
+wheel build: PASS
+editable install: PASS
+basic example: PASS
+Biopython reference validation: PASS
