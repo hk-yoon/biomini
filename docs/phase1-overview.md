@@ -33,8 +33,9 @@ Current milestone:
 
 > **BioMini v0.1.0 — Phase I Pre-Freeze**
 
-The remaining work is repository integration of the notebook course, final documentation
-cleanup, the final release audit, and the `v0.1.0-phase1` tag/release.
+Repository integration, documentation cleanup, post-integration validation, and the
+final release audit are complete. The remaining work is the final **FROZEN** status commit,
+confirmation CI, and the `v0.1.0-phase1` tag/release.
 
 ## Phase I notebook course
 

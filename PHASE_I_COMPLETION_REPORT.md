@@ -10,7 +10,7 @@ Phase I에서 수행한 Step 1–15의 개발 경과, 현재 canonical architect
 
 > **BioMini v0.1.0 — Phase I Pre-Freeze**
 
-Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. Phase I 교육용 Notebook 01–08도 작성 및 실행 감사가 완료되었다. 현재는 GitHub repository 통합과 최종 release audit가 남아 있으므로 아직 `Phase I FROZEN`으로 선언하지 않는다.
+Phase I의 코드 구현과 Canonical Audit 보정 작업은 완료되었다. Phase I 교육용 Notebook 01–08의 작성·실행 감사와 GitHub repository 통합, post-integration validation, final release audit도 완료되었다. 현재는 최종 freeze-status commit과 그 commit에 대한 CI 확인, `v0.1.0-phase1` tag/release만 남아 있으므로 아직 `Phase I FROZEN`으로 선언하지 않는다.
 
 ---
 
@@ -1177,35 +1177,33 @@ PASS했다. Notebook 05에서 발견된 class redefinition/instance 문제는 au
 
 ---
 
-# 18. Phase I Freeze 전에 남은 작업
+# 18. Phase I Freeze 직전 최종 상태
 
-Phase I source 구현, Canonical Audit A–F, public GitHub repository, hosted CI,
-교육용 Notebook 01–08 및 notebook execution audit는 완료되었다.
+Phase I source 구현, Canonical Audit A–F, public GitHub repository, 교육용 Notebook
+01–08, notebook execution audit, repository integration, post-integration validation,
+GitHub-hosted CI, final release audit는 모두 완료되었다.
 
-현재 남은 작업은 release finalization이다.
+검증된 baseline은 다음과 같다.
 
-1. **Repository Integration**
-   - updated GitHub-facing documentation 반영
-   - `notebooks/README.md` 반영
-   - audited Notebook 01–08을 `notebooks/`에 반영
+```text
+pytest                    42 passed
+line coverage             90%
+compileall                PASS
+wheel build               PASS
+editable install          PASS
+basic example             PASS
+Biopython validation      PASS
+Notebook 01–08 execution  PASS
+GitHub Actions CI         PASS
+Python 3.10–3.13          PASS
+```
 
-2. **Post-Integration Validation**
-   - pytest / coverage
-   - compileall
-   - wheel build
-   - editable install
-   - basic example
-   - Notebook 01–08 execution
-   - GitHub-hosted CI 재확인
+현재 남은 작업은 release 상태를 확정하는 최소 단계이다.
 
-3. **Final Release Audit**
-   - code / tests / docs / notebooks / examples / metadata 정합성
-   - stale milestone wording 제거
-   - release tag/status 확인
-
-4. **Freeze**
-   - tag/release `v0.1.0-phase1`
-   - `BioMini v0.1.0 — Phase I FROZEN` 선언
+1. release-facing 문서를 **Phase I FROZEN** 상태로 최종 갱신
+2. 그 exact release commit에 대해 GitHub Actions CI 재확인
+3. tag/release `v0.1.0-phase1` 생성
+4. **BioMini v0.1.0 — Phase I FROZEN** 선언
 
 ---
 
@@ -1263,13 +1261,16 @@ BioMini Phase I은 다음 목표를 달성했다.
 
 > biological domain object에서 출발하여 scientific analysis, feature engineering, machine learning, persistence, provenance, validation, testing, packaging으로 이어지는 작은 but coherent scientific software framework를 구축했다.
 
-현재 구현은 **BioMini v0.1.0 — Phase I Pre-Freeze**로 간주한다.
+현재 구현은 **BioMini v0.1.0 — Phase I Pre-Freeze / Release-Ready**로 간주한다.
 
-Phase I source code는 기능적으로 completion 상태이며, Canonical Audit correction A–F도 모두 해결되었다.
+Phase I source code는 기능적으로 completion 상태이며, Canonical Audit correction A–F,
+교육자료 작성과 실행 감사, GitHub repository 통합, post-integration validation,
+Python 3.10–3.13 hosted CI, final release audit까지 모두 완료되었다.
 
-교육자료와 GitHub 공개 기반은 완료되었으나, repository 통합 후 hosted CI 재확인과 final release audit가 남아 있으므로 아직 `FROZEN`으로 선언하지 않는다.
+남은 작업은 release-facing 문서를 **FROZEN** 상태로 최종 갱신하고, 그 exact commit에
+대한 CI를 확인한 뒤 `v0.1.0-phase1` tag/release를 생성하는 것이다.
 
-다음 작업은 prepared documentation/notebook package를 GitHub repository에 통합하고 post-integration validation을 수행하는 것이다. final release audit 이후:
+그 단계가 완료되면:
 
 ```text
 BioMini v0.1.0

@@ -11,9 +11,10 @@ and ultimately Self-Driving Lab (SDL) systems.
 
 > Current milestone: **BioMini v0.1.0 — Phase I Pre-Freeze**
 
-Phase I core implementation is complete. The eight-part Phase I educational notebook
-course has also been completed and execution-audited. The project is now in final
-documentation/integration and release-audit work before the `v0.1.0-phase1` freeze.
+Phase I core implementation and the eight-part educational notebook course are complete.
+Repository integration, local validation, notebook execution audit, and the final release
+audit have also been completed successfully. The project is now release-ready; only the
+final freeze-status update, confirmation CI, and `v0.1.0-phase1` tag/release remain.
 
 ---
 
@@ -438,16 +439,15 @@ See [`docs/roadmap.md`](docs/roadmap.md).
 
 ## Current Status
 
-Phase I source implementation and the educational notebook set are complete.
+Phase I source implementation, educational notebooks, repository integration,
+post-integration validation, and final release audit are complete.
 
 Remaining before final Phase I freeze:
 
 ```text
-GitHub-facing documentation update
+final freeze-status update
         ↓
-notebook integration into repository
-        ↓
-final full release audit
+GitHub Actions CI confirmation
         ↓
 tag / release: v0.1.0-phase1
         ↓

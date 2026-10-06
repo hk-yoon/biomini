@@ -1,5 +1,9 @@
 # BioMini Phase I — Local Integration Audit
 
+> **Historical audit record.** This document records the state before the integration
+> commit was pushed. The integration was subsequently committed to `main`, GitHub Actions
+> passed on Python 3.10–3.13, and the final release audit found no implementation blocker.
+
 ## Result
 
 The prepared Phase I documentation and audited notebook set were overlaid onto the

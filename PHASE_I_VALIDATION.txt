@@ -9,4 +9,6 @@ basic example: PASS
 Biopython reference validation: PASS
 Notebook 01–08 execution: PASS
 
-GitHub-hosted CI after repository integration: PENDING
+GitHub-hosted CI after repository integration: PASS
+
+Final Release Audit: PASS (release-ready; final freeze-status/tag step remains)

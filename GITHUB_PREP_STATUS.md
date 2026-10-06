@@ -40,17 +40,15 @@ Notebook 01–08 execution  PASS
 
 ## Current Pre-Freeze work
 
-The repository is no longer in "preparation for repository creation" status.
+Repository creation, notebook integration, documentation cleanup, post-integration
+validation, and the final release audit are complete.
 
-The remaining work is release finalization:
+The remaining work is the freeze/release sequence:
 
-1. update stale GitHub-facing documentation
-2. add `notebooks/README.md`
-3. add audited Phase I notebooks to `notebooks/`
-4. rerun the complete repository validation after notebook integration
-5. perform final release consistency audit
-6. create tag/release `v0.1.0-phase1`
-7. declare **Phase I FROZEN**
+1. apply the final **FROZEN** status update
+2. confirm GitHub Actions CI on that exact release commit
+3. create tag/release `v0.1.0-phase1`
+4. declare **Phase I FROZEN**
 
 ## Release rule
 

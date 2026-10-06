@@ -10,8 +10,9 @@ Canonical Audit corrections A–F are resolved and regression-tested.
 The Phase I educational course has also been completed as eight Jupyter notebooks and
 has passed a notebook execution/consistency audit.
 
-Phase I is **not yet marked FROZEN** because repository integration of the notebook
-course, final GitHub-facing documentation cleanup, and the final release audit remain.
+Phase I is **not yet marked FROZEN** only because the final freeze-status commit,
+its confirmation CI, and the `v0.1.0-phase1` tag/release remain. Repository integration,
+documentation cleanup, and the final release audit are complete.
 
 ## Validation status
 
@@ -62,8 +63,8 @@ Completed and audited:
 08_validation_packaging_scientific_software.ipynb
 ```
 
-The notebook course is designed as a self-contained teaching sequence and should be
-published under `notebooks/` in the same repository.
+The notebook course is published under `notebooks/` in the same repository and is
+designed as a self-contained teaching sequence.
 
 ## GitHub publication status
 
@@ -85,12 +86,10 @@ Completed:
 
 ## Remaining before Phase I freeze
 
-1. update stale GitHub-facing status/documentation
-2. add `notebooks/README.md`
-3. add audited Phase I Notebooks 01–08 to `notebooks/`
-4. run final full repository audit after notebook integration
-5. tag/release `v0.1.0-phase1`
-6. mark Phase I as **FROZEN**
+1. apply the final **FROZEN** status update to release-facing documents
+2. confirm GitHub Actions CI on that exact release commit
+3. create tag/release `v0.1.0-phase1`
+4. declare Phase I **FROZEN**
 
 ## Next development phase after freeze
 

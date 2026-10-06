@@ -51,12 +51,10 @@ Completed:
 
 Remaining before final Phase I freeze:
 
-- integrate audited notebooks into `notebooks/`
-- add `notebooks/README.md`
-- finish stale-document cleanup
-- final full release audit
+- apply final **FROZEN** status update
+- confirm GitHub Actions CI on the exact release commit
 - tag/release `v0.1.0-phase1`
-- mark Phase I **FROZEN**
+- declare Phase I **FROZEN**
 
 ---
 

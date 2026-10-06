@@ -1,5 +1,10 @@
 # BioMini Phase I — Notebook / Pre-Freeze Audit Report
 
+> **Historical Pre-Freeze audit record.** The repository/documentation issues listed below
+> were resolved by the subsequent integration and cleanup work. Notebook 01–08 are now in
+> the repository, hosted CI has passed, and the final release audit found no code/notebook
+> blocker.
+
 ## Status
 
 Audit pass initiated after completion of Notebooks 01–08.
